@@ -1,10 +1,15 @@
 package com.enseirb.timtim.map_eirb.converter;
 
+import com.enseirb.timtim.map_eirb.dao.IPOICollectionDAO;
 import com.enseirb.timtim.map_eirb.model.POICollection;
 import com.enseirb.timtim.map_eirb.model.POIType;
 
 public class POICollectionConverter implements IPOICollectionConverter{
-    public POICollection retrievePOICollection(POIType type, IPOICollectionConverterListener listener){
+    public void retrievePOICollection(POIType type, IPOICollectionConverterListener listener){
+        IPOICollectionDAO
+    }
+
+    public POICollection convert(POICollectionDTO dto, POIType type){
         POICollection retval = null;
         switch (type){
             case DEFIBRILLATOR:
@@ -19,9 +24,11 @@ public class POICollectionConverter implements IPOICollectionConverter{
                 listener.onError("Unknown POI type: " + type.toString());
         }
         return retval;
+
     }
 
     private POICollection convertInternet() {
+
         return null;
     }
 
