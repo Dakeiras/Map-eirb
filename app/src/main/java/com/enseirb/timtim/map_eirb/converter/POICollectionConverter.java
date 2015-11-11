@@ -3,10 +3,8 @@ package com.enseirb.timtim.map_eirb.converter;
 import com.enseirb.timtim.map_eirb.model.POICollection;
 import com.enseirb.timtim.map_eirb.model.POIType;
 
-import java.util.IllegalFormatException;
-
 public class POICollectionConverter implements IPOICollectionConverter{
-    public POICollection retrievePOICollection(POIType type, IPOICollectionListener listener){
+    public POICollection retrievePOICollection(POIType type, IPOICollectionConverterListener listener){
         POICollection retval = null;
         switch (type){
             case DEFIBRILLATOR:
