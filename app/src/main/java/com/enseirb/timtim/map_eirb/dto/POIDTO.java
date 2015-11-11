@@ -1,7 +1,7 @@
 package com.enseirb.timtim.map_eirb.dto;
 
-public class POIDTO implements IPOIDTO{
-    @Override
+public class POIDTO {
+
     public POIDTO get(int i) {
         //TODO:
         return null;

@@ -1,4 +1,4 @@
-package com.enseirb.timtim.map_eirb.converter;
+package com.enseirb.timtim.map_eirb.converter.listener;
 
 import com.enseirb.timtim.map_eirb.model.POICollection;
 

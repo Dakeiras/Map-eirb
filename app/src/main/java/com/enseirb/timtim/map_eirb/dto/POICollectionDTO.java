@@ -1,16 +1,22 @@
 package com.enseirb.timtim.map_eirb.dto;
 
-public class POICollectionDTO implements IPOICollectionDTO{
+import java.util.Collection;
 
-    @Override
+public class POICollectionDTO {
+
+    private Collection<POIDTO> POICollection;
+
     public int size() {
         //TODO:
         return 0;
     }
 
-    @Override
     public POIDTO get(int i) {
         //TODO:
         return null;
+    }
+
+    public Collection<POIDTO> getPOICollection(){
+        return POICollection;
     }
 }

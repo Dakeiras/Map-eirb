@@ -1,8 +1,8 @@
 package com.enseirb.timtim.map_eirb.converter;
 
+import com.enseirb.timtim.map_eirb.converter.listener.IPOICollectionConverterListener;
 import com.enseirb.timtim.map_eirb.dao.IPOICollectionDAO;
-import com.enseirb.timtim.map_eirb.dao.IPOICollectionDAOListener;
-import com.enseirb.timtim.map_eirb.dto.IPOICollectionDTO;
+import com.enseirb.timtim.map_eirb.dao.listener.IPOICollectionDAOListener;
 import com.enseirb.timtim.map_eirb.dto.POICollectionDTO;
 import com.enseirb.timtim.map_eirb.dto.POIDTO;
 import com.enseirb.timtim.map_eirb.model.DefibrillatorPOI;
@@ -15,20 +15,18 @@ import com.enseirb.timtim.map_eirb.model.ToiletPOI;
 
 public class POICollectionConverter implements IPOICollectionConverter{
     private IPOICollectionDAO dao;
-    private POIType type;
 
 
-    public POICollectionConverter(POIType type) {
-//        this.dao = new POICollectionDAO();
-        this.type = type;
+    public POICollectionConverter() {
+        //this.dao = new POICollectionDAO();
     }
 
-    public void retrievePOICollection(POIType type, final IPOICollectionConverterListener listener){
-        dao.retrieveWeatherPOICollection(new IPOICollectionDAOListener() {
+    public void retrievePOICollection(final POIType type, final IPOICollectionConverterListener listener){
+        dao.retrievePOICollection(new IPOICollectionDAOListener() {
 
             @Override
-            public void onSuccess(IPOICollectionDTO poiCollectionDTO) {
-                listener.onSuccess(convert((POICollectionDTO) poiCollectionDTO));
+            public void onSuccess(POICollectionDTO poiCollectionDTO) {
+                listener.onSuccess(convert(poiCollectionDTO, type));
             }
 
             @Override
@@ -38,7 +36,7 @@ public class POICollectionConverter implements IPOICollectionConverter{
         });
     }
 
-    public POICollection convert(POICollectionDTO dto){
+    public POICollection convert(POICollectionDTO dto, POIType type){
         POICollection retval;
         switch (type){
             case DEFIBRILLATOR:
