@@ -6,4 +6,7 @@ public class POICollection {
 
     private Collection<POI> poiCollection;
 
+    public void add(POI poi) {
+        poiCollection.add(poi);
+    }
 }
