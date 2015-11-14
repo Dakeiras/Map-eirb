@@ -2,8 +2,15 @@ package com.enseirb.timtim.map_eirb;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.enseirb.timtim.map_eirb.dao.InternetAccessDAO;
+import com.enseirb.timtim.map_eirb.dto.DataDTO;
+import com.enseirb.timtim.map_eirb.dto.InternetAccessDTO;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
