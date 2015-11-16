@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by air on 14/11/2015.
  */
-public abstract class DataParser {
+public abstract class DataParser implements IPOICollectionParser{
     public static final String LONGITUDE = "x_long";
     public static final String LATITUDE = "y_lat";
 
