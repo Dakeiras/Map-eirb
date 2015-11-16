@@ -5,8 +5,6 @@ public class POIInternetAccessDTO extends POIDTO {
     public String name;
     public String accessType;
     public String paid;
-    public String longitude;
-    public String latitude;
 
     public POIInternetAccessDTO(String longitude, String latitude, String name, String accessType, String paid) {
         this.longitude = longitude;
