@@ -1,12 +1,10 @@
 package com.enseirb.timtim.map_eirb.presenter;
 
 import android.content.pm.ActivityInfo;
+import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.widget.Button;
 
 import com.enseirb.timtim.map_eirb.R;
 
@@ -19,17 +17,18 @@ public class SelectionScreenActivity extends AppCompatActivity {
         if(getResources().getBoolean(R.bool.portrait_only)){
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        Typeface font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
+        Typeface fontIcomoon = Typeface.createFromAsset(getAssets(), "icomoon.ttf");
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        Button electricCarButton = (Button) findViewById(R.id.selectionscreen_button_electric_car);
+        electricCarButton.setTypeface(font);
+        Button defibrilatorButton = (Button) findViewById(R.id.selectionscreen_button_defibrilator);
+        defibrilatorButton.setTypeface(font);
+        Button internetAccessButton = (Button) findViewById(R.id.selectionscreen_button_internet_access);
+        internetAccessButton.setTypeface(font);
+        Button toiletsButton = (Button) findViewById(R.id.selectionscreen_button_toilets);
+        toiletsButton.setTypeface(fontIcomoon);
+
     }
 
 }
