@@ -1,13 +1,13 @@
-package com.enseirb.timtim.map_eirb.converter.v2;
+package com.enseirb.timtim.map_eirb.converter;
 
 import com.enseirb.timtim.map_eirb.dto.POIDTO;
 import com.enseirb.timtim.map_eirb.model.POI;
 
-public class InternetConverter implements IPOIConverter {
+public class ElectricsConverter implements IPOIsConverter {
 
     @Override
     public POI convertDTO(POIDTO collectionDTO) {
-        //TODO : InternetDTO => Internet
+        //TODO : ElectricDTO => Electric
         return null;
     }
 }
