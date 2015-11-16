@@ -1,7 +1,5 @@
 package com.enseirb.timtim.map_eirb.parser;
 
-import com.enseirb.timtim.map_eirb.dto.DataDTO;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,7 +11,7 @@ import java.util.List;
 /**
  * Created by air on 14/11/2015.
  */
-public abstract class DataParser {
+public abstract class DataParser implements IPOICollectionParser{
     public static final String LONGITUDE = "x_long";
     public static final String LATITUDE = "y_lat";
 
