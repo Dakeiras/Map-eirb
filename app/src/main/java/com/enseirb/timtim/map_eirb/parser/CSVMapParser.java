@@ -1,7 +1,5 @@
 package com.enseirb.timtim.map_eirb.parser;
 
-import com.enseirb.timtim.map_eirb.dto.DataDTO;
-
 import java.util.List;
 
 /**

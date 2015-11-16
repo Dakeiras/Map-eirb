@@ -1,6 +1,5 @@
 package com.enseirb.timtim.map_eirb.dao;
 
-import com.enseirb.timtim.map_eirb.dto.DataDTO;
 import com.enseirb.timtim.map_eirb.dto.ElectricDTO;
 import com.enseirb.timtim.map_eirb.parser.DataParser;
 
