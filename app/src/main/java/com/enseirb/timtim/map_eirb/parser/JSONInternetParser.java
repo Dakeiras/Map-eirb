@@ -16,12 +16,12 @@ public class JSONInternetParser implements IPOICollectionParser {
     private static final String LONGITUDE = "x_long";
     private static final String LATITUDE = "y_lat";
     @Override
-    public POICollectionDTO parse(String jsonDefibrillator)  {
+    public POICollectionDTO parse(String jsonInternet)  {
         POICollectionDTO poiInternetAccess = new POICollectionDTO();
         try {
             JSONArray internetAccessArray;
             JSONObject reader = null;
-            reader = new JSONObject(jsonDefibrillator);
+            reader = new JSONObject(jsonInternet);
             internetAccessArray = reader.getJSONArray(INTERNET_OBJECT);
             for (int i = 0; i < internetAccessArray.length(); i++) {
                 JSONObject internetAccessObject;

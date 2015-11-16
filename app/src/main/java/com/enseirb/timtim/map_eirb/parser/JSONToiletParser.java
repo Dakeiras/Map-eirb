@@ -13,11 +13,11 @@ public class JSONToiletParser implements IPOICollectionParser {
     private static final String LONGITUDE = "x_long";
     private static final String LATITUDE = "y_lat";
     @Override
-    public POICollectionDTO parse(String jsonDefibrillator) {
+    public POICollectionDTO parse(String jsonToilet) {
         POICollectionDTO poiToilet = new POICollectionDTO();
         try{
             JSONArray toiletsArray;
-            JSONObject reader =new JSONObject(jsonDefibrillator);
+            JSONObject reader =new JSONObject(jsonToilet);
             toiletsArray = reader.getJSONArray(TOILET_OBJECT);
 
             for (int i = 0; i < toiletsArray.length(); i++) {
